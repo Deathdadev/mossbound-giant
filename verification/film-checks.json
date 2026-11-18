@@ -1,0 +1,16 @@
+{
+  "file": "public/film/the-mossbound-giant.mp4",
+  "durationSeconds": 42,
+  "frames": 1008,
+  "distinctCompleteFrames": 1008,
+  "framesPerSecond": 24,
+  "contiguousFrameTimestamps": true,
+  "resolution": [
+    1600,
+    780
+  ],
+  "videoCodec": "H.264",
+  "audio": "AAC stereo, 44100 Hz",
+  "bytes": 17569422,
+  "sha256": "f0baf0d73507f23869e275978349b40ad47f98cb52789ae16e61e3f9e9c94196"
+}

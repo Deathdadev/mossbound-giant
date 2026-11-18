@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    "MP4 decoding",
+    "42-second duration",
+    "autoplay muted",
+    "pause/resume",
+    "sound toggle",
+    "chapter seeking",
+    "repeat toggle",
+    "pointer scrubbing and resume",
+    "modal pause/restore",
+    "journal tabs",
+    "MP4 download",
+    "cinema view",
+    "native fullscreen",
+    "end/replay",
+    "keyboard shortcuts",
+    "five responsive widths",
+    "reduced-motion preference"
+  ],
+  "playback": {
+    "total": 156,
+    "dropped": 0
+  },
+  "pageErrors": []
+}
