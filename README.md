@@ -14,6 +14,8 @@ Built in an **Arena.ai model battle** (Code mode) using **`gpt-6.2-astra-max`**,
   Arena pages sit behind a sign-in and a Cloudflare check, so that link does not render the trace for a logged-out visitor. The full tool-call trace is transcribed here: **[docs/model-trace.md](docs/model-trace.md)**, with the verbatim prompt in **[docs/original-prompt.md](docs/original-prompt.md)**.
 - Idea origin: [ChetasLua's "Moss Keeper"](https://x.com/chetaslua/status/2117169796290916732) / [moss-keeper repo](https://github.com/ChetasLua/moss-keeper), a one-file HTML anime short.
 
+Two fixes were applied to the handed-off bundle, neither touching the render pipeline: the four self-hosted font files were absent (the dev server was answering those requests with its HTML 404 body, which Chrome reports as `invalid sfntVersion: 1008821359`), and the MP4 was missing entirely. Both were regenerated with the repo's own tools — `tools/soundtrack.py` plus `tools/render-film.mjs` — and asset URLs were made page-relative so the single-file bundle resolves under the Pages subpath.
+
 **Not an apples-to-apples comparison.** The Moss Keeper result came from a different harness — a one-file HTML page, and a toolset that very likely included a 3D/Blender-style renderer. This repo was built in Arena's sandboxed code environment (Vite + React + TypeScript + a browser + FFmpeg), with no image generation and no 3D tooling. Treat the outputs as different environments solving the same prompt, not as the same model competing on equal terms.
 
 ## Run it
