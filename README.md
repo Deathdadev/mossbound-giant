@@ -77,8 +77,6 @@ verification/          screenshots + film/player check results
 | ← / → | seek 5 s |
 | Esc | close journal, leave cinema mode |
 
-## Licence
 
-All rights reserved by default: no open-source licence is attached to this repository, so the code is shared for viewing and study, not for redistribution. The fonts are the exception — they are used under the SIL Open Font License (see `public/fonts/*-OFL.txt`).
 
 
