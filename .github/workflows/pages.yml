@@ -6,9 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   build:
@@ -20,11 +18,12 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    runs-on: github-pages
-    steps:
-      - uses: actions/deploy-pages@v4
+      - name: Publish the built bundle on gh-pages
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 4188199+github-actions[bot]@users.noreply.github.com
+          git checkout --orphan gh-pages
+          git rm --cached -r -q .
+          git add -f -- dist
+          git commit -m "Publish screening room"
+          git push -f origin gh-pages:gh-pages
