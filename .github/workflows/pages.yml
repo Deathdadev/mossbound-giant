@@ -24,6 +24,8 @@ jobs:
           git config user.email 4188199+github-actions[bot]@users.noreply.github.com
           git checkout --orphan gh-pages
           git rm --cached -r -q .
-          git add -f -- dist
+          find . -maxdepth 1 -mindepth 1 ! -name dist ! -name .git -exec rm -rf {} +
+          mv dist/* .
+          git add -f .
           git commit -m "Publish screening room"
           git push -f origin gh-pages:gh-pages
