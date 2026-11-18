@@ -18,9 +18,6 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm run build
-      - name: Point asset URLs at the Pages subpath
-        run: |
-          sed -i 's#"/fonts/#"fonts/#g; s#"/film/#"film/#g; s#"/canopy-mark.svg"#"canopy-mark.svg"#g' dist/index.html
       - name: Publish the built bundle on gh-pages
         run: |
           git config user.name github-actions[bot]

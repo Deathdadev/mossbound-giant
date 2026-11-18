@@ -23,6 +23,6 @@ export const CHAPTERS = [
     roman: "III",
   },
 ] as const;
-export const FILM_URL = "/film/the-mossbound-giant.mp4";
+export const FILM_URL = "film/the-mossbound-giant.mp4";
 export const timecode = (t: number) =>
   `${String(Math.floor(t / 60)).padStart(2, "0")}:${String(Math.floor(t % 60)).padStart(2, "0")}`;

@@ -206,7 +206,7 @@ export default function App() {
             ref={video}
             className="film-image"
             src={FILM_URL}
-            poster="/film/poster.jpg"
+            poster="film/poster.jpg"
             playsInline
             disableRemotePlayback
             disablePictureInPicture
@@ -237,7 +237,7 @@ export default function App() {
           >
             <track
               kind="captions"
-              src="/film/forest-sounds.vtt"
+              src="film/forest-sounds.vtt"
               srcLang="en"
               label="Ambient sound descriptions"
             />
